@@ -35,28 +35,28 @@
     {% endif %}
   </p>
 
-  <details class="publication-details">
+  {% if post.abstract or post.excerpt %}
+  <details class="publication-details abstract-details">
     <summary>Abstract</summary>
 
-    {% if post.abstract %}
     <div class="abstract-box">
-      <strong>Abstract.</strong><br>
-      {{ post.abstract }}
+      {% if post.abstract %}
+        {{ post.abstract }}
+      {% elsif post.excerpt %}
+        {{ post.excerpt }}
+      {% endif %}
     </div>
-    {% elsif post.excerpt %}
-    <div class="abstract-box">
-      <strong>Abstract.</strong><br>
-      {{ post.excerpt }}
-    </div>
-    {% endif %}
+  </details>
+  {% endif %}
 
-    {% if post.tldr %}
+  {% if post.tldr %}
+  <details class="publication-details tldr-details">
+    <summary>TL;DR</summary>
+
     <div class="nojargon-box">
-      <strong>TL;DR.</strong><br>
       {{ post.tldr }}
     </div>
-    {% endif %}
-
   </details>
+  {% endif %}
 
 </div>

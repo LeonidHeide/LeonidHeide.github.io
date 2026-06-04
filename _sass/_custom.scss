@@ -17,7 +17,11 @@
 }
 
 .publication-details {
-  margin-top: 0.75em;
+  margin-top: 0.5em;
+}
+
+.publication-details + .publication-details {
+  margin-top: 0.35em;
 }
 
 .publication-details summary {
@@ -27,14 +31,14 @@
 }
 
 .abstract-box {
-  margin-top: 1em;
+  margin-top: 0.75em;
   padding: 1em;
   border-left: 4px solid var(--global-border-color);
   background: var(--global-bg-color);
 }
 
 .nojargon-box {
-  margin-top: 1em;
+  margin-top: 0.75em;
   padding: 1em;
   border-left: 4px solid var(--global-theme-color);
   background: rgba(0, 100, 200, 0.08);
