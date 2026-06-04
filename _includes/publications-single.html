@@ -21,33 +21,33 @@
   </p>
 
   <p class="publication-links">
-    {% assign has_previous_link = false %}
+    {% assign link_separator = false %}
 
     {% if post.paperurl %}
       <a href="{{ post.paperurl }}">PDF</a>
-      {% assign has_previous_link = true %}
+      {% assign link_separator = true %}
     {% endif %}
 
     {% if post.slidesurl %}
-      {% if has_previous_link %} | {% endif %}
+      {% if link_separator %} | {% endif %}
       <a href="{{ post.slidesurl }}">Slides</a>
-      {% assign has_previous_link = true %}
+      {% assign link_separator = true %}
     {% endif %}
 
     {% if post.bibtexurl %}
-      {% if has_previous_link %} | {% endif %}
+      {% if link_separator %} | {% endif %}
       <a href="{{ post.bibtexurl }}">BibTeX</a>
-      {% assign has_previous_link = true %}
+      {% assign link_separator = true %}
     {% endif %}
 
     {% if post.codeurl %}
-      {% if has_previous_link %} | {% endif %}
+      {% if link_separator %} | {% endif %}
       <a href="{{ post.codeurl }}">Code</a>
-      {% assign has_previous_link = true %}
+      {% assign link_separator = true %}
     {% endif %}
   </p>
 
-  {% if post.abstract or post.nojargon or post.excerpt %}
+  {% if post.abstract or post.tldr or post.excerpt %}
   <details class="publication-details">
     <summary>Abstract</summary>
 
@@ -63,10 +63,10 @@
     </div>
     {% endif %}
 
-    {% if post.nojargon %}
+    {% if post.tldr %}
     <div class="nojargon-box">
       <strong>TL;DR.</strong><br>
-      {{ post.nojargon }}
+      {{ post.tldr }}
     </div>
     {% endif %}
 
