@@ -1,0 +1,76 @@
+<div class="publication-entry">
+
+  <p class="publication-citation">
+    <strong>
+      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    </strong><br>
+
+    {% if post.citation %}
+      {{ post.citation }}
+    {% else %}
+      {% if post.authors %}
+        {{ post.authors }}.
+      {% endif %}
+      {% if post.venue %}
+        <em>{{ post.venue }}</em>,
+      {% endif %}
+      {% if post.date %}
+        {{ post.date | date: "%Y" }}.
+      {% endif %}
+    {% endif %}
+  </p>
+
+  <p class="publication-links">
+    {% assign has_previous_link = false %}
+
+    {% if post.paperurl %}
+      <a href="{{ post.paperurl }}">PDF</a>
+      {% assign has_previous_link = true %}
+    {% endif %}
+
+    {% if post.slidesurl %}
+      {% if has_previous_link %} | {% endif %}
+      <a href="{{ post.slidesurl }}">Slides</a>
+      {% assign has_previous_link = true %}
+    {% endif %}
+
+    {% if post.bibtexurl %}
+      {% if has_previous_link %} | {% endif %}
+      <a href="{{ post.bibtexurl }}">BibTeX</a>
+      {% assign has_previous_link = true %}
+    {% endif %}
+
+    {% if post.codeurl %}
+      {% if has_previous_link %} | {% endif %}
+      <a href="{{ post.codeurl }}">Code</a>
+      {% assign has_previous_link = true %}
+    {% endif %}
+  </p>
+
+  {% if post.abstract or post.nojargon or post.excerpt %}
+  <details class="publication-details">
+    <summary>Abstract</summary>
+
+    {% if post.abstract %}
+    <div class="abstract-box">
+      <strong>Abstract.</strong><br>
+      {{ post.abstract }}
+    </div>
+    {% elsif post.excerpt %}
+    <div class="abstract-box">
+      <strong>Abstract.</strong><br>
+      {{ post.excerpt }}
+    </div>
+    {% endif %}
+
+    {% if post.nojargon %}
+    <div class="nojargon-box">
+      <strong>TL;DR.</strong><br>
+      {{ post.nojargon }}
+    </div>
+    {% endif %}
+
+  </details>
+  {% endif %}
+
+</div>
