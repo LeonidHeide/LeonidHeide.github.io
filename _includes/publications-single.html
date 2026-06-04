@@ -8,9 +8,6 @@
     {% if post.citation %}
       {{ post.citation }}
     {% else %}
-      {% if post.authors %}
-        {{ post.authors }}.
-      {% endif %}
       {% if post.venue %}
         <em>{{ post.venue }}</em>,
       {% endif %}
@@ -21,33 +18,23 @@
   </p>
 
   <p class="publication-links">
-    {% assign link_separator = false %}
-
     {% if post.paperurl %}
       <a href="{{ post.paperurl }}">PDF</a>
-      {% assign link_separator = true %}
     {% endif %}
 
     {% if post.slidesurl %}
-      {% if link_separator %} | {% endif %}
-      <a href="{{ post.slidesurl }}">Slides</a>
-      {% assign link_separator = true %}
+      | <a href="{{ post.slidesurl }}">Slides</a>
     {% endif %}
 
     {% if post.bibtexurl %}
-      {% if link_separator %} | {% endif %}
-      <a href="{{ post.bibtexurl }}">BibTeX</a>
-      {% assign link_separator = true %}
+      | <a href="{{ post.bibtexurl }}">BibTeX</a>
     {% endif %}
 
     {% if post.codeurl %}
-      {% if link_separator %} | {% endif %}
-      <a href="{{ post.codeurl }}">Code</a>
-      {% assign link_separator = true %}
+      | <a href="{{ post.codeurl }}">Code</a>
     {% endif %}
   </p>
 
-  {% if post.abstract or post.tldr or post.excerpt %}
   <details class="publication-details">
     <summary>Abstract</summary>
 
@@ -71,6 +58,5 @@
     {% endif %}
 
   </details>
-  {% endif %}
 
 </div>
