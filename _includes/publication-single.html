@@ -34,55 +34,55 @@
       {% endif %}
     </p>
 
-    <p class="publication-links">
-      {% assign link_separator = false %}
-
+    <div class="publication-button-row">
       {% if post.paperurl %}
-        <a href="{{ post.paperurl }}">Paper</a>
-        {% assign link_separator = true %}
+        <a class="pub-pill" href="{{ post.paperurl }}" target="_blank" rel="noopener">Paper</a>
       {% endif %}
 
       {% if post.slidesurl %}
-        {% if link_separator %} | {% endif %}
-        <a href="{{ post.slidesurl }}">Slides</a>
-        {% assign link_separator = true %}
-      {% endif %}
-
-      {% if post.bibtexurl %}
-        {% if link_separator %} | {% endif %}
-        <a href="{{ post.bibtexurl }}">BibTeX</a>
-        {% assign link_separator = true %}
+        <a class="pub-pill" href="{{ post.slidesurl }}" target="_blank" rel="noopener">Slides</a>
       {% endif %}
 
       {% if post.codeurl %}
-        {% if link_separator %} | {% endif %}
-        <a href="{{ post.codeurl }}">Code</a>
-        {% assign link_separator = true %}
+        <a class="pub-pill" href="{{ post.codeurl }}" target="_blank" rel="noopener">Code</a>
       {% endif %}
-    </p>
+
+      {% if post.bibtex %}
+        <button class="pub-pill pub-pill-button" type="button" onclick="openBibtexModal(this)">BibTeX</button>
+        <template class="bibtex-template">{{ post.bibtex }}</template>
+      {% elsif post.bibtexurl %}
+        <a class="pub-pill" href="{{ post.bibtexurl }}" target="_blank" rel="noopener">BibTeX</a>
+      {% endif %}
+    </div>
+
+    <div class="publication-toggle-row">
+      {% if post.abstract or post.excerpt %}
+      <button class="publication-toggle-button" type="button" onclick="togglePublicationPanel(this, 'abstract')">
+        Abstract
+      </button>
+      {% endif %}
+
+      {% if post.tldr %}
+      <button class="publication-toggle-button" type="button" onclick="togglePublicationPanel(this, 'tldr')">
+        TL;DR
+      </button>
+      {% endif %}
+    </div>
 
     {% if post.abstract or post.excerpt %}
-    <details class="publication-details abstract-details">
-      <summary>Abstract</summary>
-
-      <div class="abstract-box">
-        {% if post.abstract %}
-          {{ post.abstract }}
-        {% elsif post.excerpt %}
-          {{ post.excerpt }}
-        {% endif %}
-      </div>
-    </details>
+    <div class="publication-panel abstract-panel">
+      {% if post.abstract %}
+        {{ post.abstract }}
+      {% elsif post.excerpt %}
+        {{ post.excerpt }}
+      {% endif %}
+    </div>
     {% endif %}
 
     {% if post.tldr %}
-    <details class="publication-details tldr-details">
-      <summary>TL;DR</summary>
-
-      <div class="nojargon-box">
-        {{ post.tldr }}
-      </div>
-    </details>
+    <div class="publication-panel tldr-panel">
+      {{ post.tldr }}
+    </div>
     {% endif %}
 
   </div>

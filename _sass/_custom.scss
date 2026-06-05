@@ -1,17 +1,52 @@
-.publication-year {
-  margin-top: 1.4em;
-  margin-bottom: 0.45em;
-  font-size: 2.0em;
+/* --- Global / header cleanup --- */
+
+.masthead {
+  border-bottom: none;
+}
+
+.masthead__inner-wrap {
+  max-width: 1000px;
+}
+
+.site-title {
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.greedy-nav a {
   font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.greedy-nav .visible-links a {
+  color: #666;
+}
+
+.greedy-nav .visible-links a:hover,
+.greedy-nav .visible-links a.active {
+  color: #000;
+}
+
+/* --- Publication layout --- */
+
+.publication-year {
+  margin-top: 1.8em;
+  margin-bottom: 0.45em;
+  font-size: 2.2em;
+  font-weight: 800;
+  color: #222;
 }
 
 .publication-card {
   display: flex;
   align-items: flex-start;
-  gap: 1.2em;
+  gap: 1.25em;
   margin-bottom: 0;
-  padding: 1.0em 1.1em;
-  background: var(--global-card-bg-color, #fff);
+  padding: 1.05em 1.15em;
+  background: #fff;
   border: 1px solid var(--global-border-color);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
@@ -23,6 +58,7 @@
 .publication-image {
   flex: 0 0 125px;
   max-width: 125px;
+  padding-top: 0.15em;
 }
 
 .publication-image img {
@@ -40,8 +76,9 @@
 .publication-title {
   margin: 0 0 0.25em 0;
   font-size: 1.2em;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.25;
+  color: #222;
 }
 
 .publication-authors {
@@ -50,17 +87,17 @@
 }
 
 .publication-venue {
-  margin: 0.1em 0;
+  margin: 0.1em 0 0.35em 0;
   color: var(--global-text-color-light);
 }
 
 .publication-badge {
   display: inline-block;
   margin-left: 0.35em;
-  padding: 0.1em 0.55em;
+  padding: 0.1em 0.6em;
   border-radius: 999px;
-  font-size: 0.8em;
-  font-weight: 700;
+  font-size: 0.78em;
+  font-weight: 800;
   color: #fff;
   vertical-align: middle;
 }
@@ -73,39 +110,136 @@
   background: #0072b2;
 }
 
-.publication-links {
-  margin-top: 0.25em;
-  margin-bottom: 0.45em;
-  font-size: 0.95em;
+/* --- Black pill buttons for paper/slides/bibtex/code --- */
+
+.publication-button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45em;
+  margin-top: 0.45em;
+  margin-bottom: 0.7em;
 }
 
-.publication-details {
-  margin-top: 0.35em;
+.pub-pill,
+.pub-pill:visited {
+  display: inline-block;
+  padding: 0.25em 0.85em;
+  border-radius: 999px;
+  border: 2px solid #000;
+  background: #000;
+  color: #fff !important;
+  font-size: 0.85em;
+  font-weight: 700;
+  line-height: 1.3;
+  text-decoration: none;
 }
 
-.publication-details + .publication-details {
-  margin-top: 0.25em;
+.pub-pill:hover {
+  background: #fff;
+  color: #000 !important;
+  text-decoration: none;
 }
 
-.publication-details summary {
+.pub-pill-button {
   cursor: pointer;
-  font-weight: bold;
-  color: var(--global-theme-color);
+  font-family: inherit;
 }
 
-.abstract-box {
+/* --- Abstract / TLDR toggle buttons --- */
+
+.publication-toggle-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.55em;
   margin-top: 0.55em;
-  padding: 0.85em 1em;
-  border-left: 4px solid var(--global-border-color);
-  background: var(--global-bg-color);
 }
 
-.nojargon-box {
-  margin-top: 0.55em;
-  padding: 0.85em 1em;
-  border-left: 4px solid var(--global-theme-color);
-  background: rgba(0, 100, 200, 0.08);
+.publication-toggle-button {
+  width: 100%;
+  padding: 0.55em 0.8em;
+  border: 2px solid #000;
+  background: #fff;
+  color: #000;
+  font-family: inherit;
+  font-size: 0.9em;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  cursor: pointer;
 }
+
+.publication-toggle-button:hover,
+.publication-toggle-button.is-active {
+  background: #000;
+  color: #fff;
+}
+
+.publication-panel {
+  display: none;
+  margin-top: 0.65em;
+  padding: 0.9em 1em;
+  border: 2px solid #000;
+  background: #fff;
+  line-height: 1.55;
+}
+
+.publication-panel.is-open {
+  display: block;
+}
+
+.tldr-panel {
+  background: #f7f7f7;
+}
+
+/* --- BibTeX modal --- */
+
+.bibtex-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  align-items: center;
+  justify-content: center;
+  padding: 1.5em;
+}
+
+.bibtex-modal.is-open {
+  display: flex;
+}
+
+.bibtex-modal-content {
+  position: relative;
+  max-width: 650px;
+  width: 100%;
+  padding: 1.5em;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+}
+
+.bibtex-modal-title {
+  margin-top: 0;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+}
+
+.bibtex-modal-close {
+  position: absolute;
+  top: 0.5em;
+  right: 0.65em;
+  border: none;
+  background: transparent;
+  font-size: 1.6em;
+  cursor: pointer;
+}
+
+#bibtex-modal-text {
+  white-space: pre-wrap;
+  font-size: 0.85em;
+}
+
+/* --- Mobile layout --- */
 
 @media screen and (max-width: 600px) {
   .publication-card {
@@ -115,5 +249,82 @@
   .publication-image {
     max-width: 150px;
     margin-bottom: 0.75em;
+  }
+
+  .publication-toggle-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+.home-profile {
+  display: grid;
+  grid-template-columns: 330px 1fr;
+  gap: 3em;
+  align-items: center;
+  margin-top: 3em;
+}
+
+.home-profile-image img {
+  width: 330px;
+  height: 330px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.home-profile-text {
+  font-size: 1.05em;
+  line-height: 1.65;
+}
+
+.cv-button {
+  display: inline-block;
+  margin-top: 1.2em;
+  padding: 0.65em 1.5em;
+  border: 3px solid #000;
+  color: #000 !important;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.cv-button:hover {
+  background: #000;
+  color: #fff !important;
+  text-decoration: none;
+}
+
+.home-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2em;
+  margin-top: 1.8em;
+}
+
+.home-links a {
+  color: #000;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.home-links a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 800px) {
+  .home-profile {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .home-profile-image img {
+    width: 240px;
+    height: 240px;
+  }
+
+  .home-links {
+    justify-content: center;
   }
 }
