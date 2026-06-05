@@ -24,15 +24,15 @@
       {% endif %}
 
       {% if post.pubtype %}
-        <span class="publication-badge">{{ post.pubtype }}</span>
+        {% if post.category == "conferences" %}
+          <span class="publication-badge conference-badge">{{ post.pubtype }}</span>
+        {% elsif post.category == "manuscripts" %}
+          <span class="publication-badge journal-badge">{{ post.pubtype }}</span>
+        {% else %}
+          <span class="publication-badge">{{ post.pubtype }}</span>
+        {% endif %}
       {% endif %}
     </p>
-
-    {% if post.citation and post.authors == nil %}
-    <p class="publication-citation">
-      {{ post.citation }}
-    </p>
-    {% endif %}
 
     <p class="publication-links">
       {% assign link_separator = false %}

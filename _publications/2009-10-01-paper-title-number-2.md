@@ -7,7 +7,7 @@ date: 2009-10-01
 venue: "Conference 1"
 authors: "<strong>Author A</strong>, Coauthor A, Coauthor B"
 pubtype: "Conference"
-image: "/_publications/paper_1.png"
+image: "/images/publications/paper_1.png"
 paperurl: "https://academicpages.github.io/files/paper1.pdf"
 slidesurl: "https://academicpages.github.io/files/slides1.pdf"
 bibtexurl: "https://academicpages.github.io/files/bibtex1.bib"
@@ -18,4 +18,3 @@ abstract: >
 tldr: >
   This is the short plain-language explanation.
 ---
-
