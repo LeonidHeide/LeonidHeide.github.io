@@ -1,62 +1,90 @@
-<div class="publication-entry">
+<div class="publication-card">
 
-  <p class="publication-citation">
-    <strong>
-      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-    </strong><br>
+  {% if post.image %}
+  <div class="publication-image">
+    <img src="{{ post.image | relative_url }}" alt="{{ post.title }}">
+  </div>
+  {% endif %}
 
-    {% if post.citation %}
-      {{ post.citation }}
-    {% else %}
+  <div class="publication-content">
+
+    <p class="publication-title">
+      {{ post.title }}
+    </p>
+
+    {% if post.authors %}
+    <p class="publication-authors">
+      {{ post.authors }}
+    </p>
+    {% endif %}
+
+    <p class="publication-venue">
       {% if post.venue %}
-        <em>{{ post.venue }}</em>,
+        <em>{{ post.venue }}</em>
       {% endif %}
-      {% if post.date %}
-        {{ post.date | date: "%Y" }}.
+
+      {% if post.pubtype %}
+        <span class="publication-badge">{{ post.pubtype }}</span>
       {% endif %}
-    {% endif %}
-  </p>
+    </p>
 
-  <p class="publication-links">
-    {% if post.paperurl %}
-      <a href="{{ post.paperurl }}">PDF</a>
-    {% endif %}
-
-    {% if post.slidesurl %}
-      | <a href="{{ post.slidesurl }}">Slides</a>
+    {% if post.citation and post.authors == nil %}
+    <p class="publication-citation">
+      {{ post.citation }}
+    </p>
     {% endif %}
 
-    {% if post.bibtexurl %}
-      | <a href="{{ post.bibtexurl }}">BibTeX</a>
-    {% endif %}
+    <p class="publication-links">
+      {% assign link_separator = false %}
 
-    {% if post.codeurl %}
-      | <a href="{{ post.codeurl }}">Code</a>
-    {% endif %}
-  </p>
-
-  {% if post.abstract or post.excerpt %}
-  <details class="publication-details abstract-details">
-    <summary>Abstract</summary>
-
-    <div class="abstract-box">
-      {% if post.abstract %}
-        {{ post.abstract }}
-      {% elsif post.excerpt %}
-        {{ post.excerpt }}
+      {% if post.paperurl %}
+        <a href="{{ post.paperurl }}">Paper</a>
+        {% assign link_separator = true %}
       {% endif %}
-    </div>
-  </details>
-  {% endif %}
 
-  {% if post.tldr %}
-  <details class="publication-details tldr-details">
-    <summary>TL;DR</summary>
+      {% if post.slidesurl %}
+        {% if link_separator %} | {% endif %}
+        <a href="{{ post.slidesurl }}">Slides</a>
+        {% assign link_separator = true %}
+      {% endif %}
 
-    <div class="nojargon-box">
-      {{ post.tldr }}
-    </div>
-  </details>
-  {% endif %}
+      {% if post.bibtexurl %}
+        {% if link_separator %} | {% endif %}
+        <a href="{{ post.bibtexurl }}">BibTeX</a>
+        {% assign link_separator = true %}
+      {% endif %}
+
+      {% if post.codeurl %}
+        {% if link_separator %} | {% endif %}
+        <a href="{{ post.codeurl }}">Code</a>
+        {% assign link_separator = true %}
+      {% endif %}
+    </p>
+
+    {% if post.abstract or post.excerpt %}
+    <details class="publication-details abstract-details">
+      <summary>Abstract</summary>
+
+      <div class="abstract-box">
+        {% if post.abstract %}
+          {{ post.abstract }}
+        {% elsif post.excerpt %}
+          {{ post.excerpt }}
+        {% endif %}
+      </div>
+    </details>
+    {% endif %}
+
+    {% if post.tldr %}
+    <details class="publication-details tldr-details">
+      <summary>TL;DR</summary>
+
+      <div class="nojargon-box">
+        {{ post.tldr }}
+      </div>
+    </details>
+    {% endif %}
+
+  </div>
 
 </div>

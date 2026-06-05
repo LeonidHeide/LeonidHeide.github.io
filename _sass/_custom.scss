@@ -1,27 +1,75 @@
-.publication-entry {
-  margin-bottom: 2.0em;
+.publication-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2em;
+  margin-bottom: 1.5em;
+  padding: 1.1em 1.2em;
+  background: var(--global-card-bg-color, #fff);
+  border: 1px solid var(--global-border-color);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.publication-image {
+  flex: 0 0 120px;
+  max-width: 120px;
+}
+
+.publication-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.publication-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.publication-title {
+  margin: 0 0 0.25em 0;
+  font-size: 1.15em;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.publication-authors {
+  margin: 0.15em 0;
+  color: var(--global-text-color-light);
+}
+
+.publication-venue {
+  margin: 0.15em 0;
+  color: var(--global-text-color-light);
+}
+
+.publication-badge {
+  display: inline-block;
+  margin-left: 0.35em;
+  padding: 0.1em 0.55em;
+  border-radius: 999px;
+  font-size: 0.8em;
+  font-weight: 700;
+  color: #fff;
+  background: var(--global-theme-color);
 }
 
 .publication-citation {
-  margin-bottom: 0.25em;
-}
-
-.publication-citation strong {
-  font-size: 1.05em;
+  margin: 0.25em 0;
 }
 
 .publication-links {
   margin-top: 0.25em;
   margin-bottom: 0.5em;
-  font-size: 0.9em;
+  font-size: 0.95em;
 }
 
 .publication-details {
-  margin-top: 0.5em;
+  margin-top: 0.45em;
 }
 
 .publication-details + .publication-details {
-  margin-top: 0.35em;
+  margin-top: 0.3em;
 }
 
 .publication-details summary {
@@ -31,15 +79,27 @@
 }
 
 .abstract-box {
-  margin-top: 0.75em;
-  padding: 1em;
+  margin-top: 0.65em;
+  padding: 0.9em 1em;
   border-left: 4px solid var(--global-border-color);
   background: var(--global-bg-color);
 }
 
 .nojargon-box {
-  margin-top: 0.75em;
-  padding: 1em;
+  margin-top: 0.65em;
+  padding: 0.9em 1em;
   border-left: 4px solid var(--global-theme-color);
   background: rgba(0, 100, 200, 0.08);
+}
+
+/* Mobile layout */
+@media screen and (max-width: 600px) {
+  .publication-card {
+    display: block;
+  }
+
+  .publication-image {
+    max-width: 160px;
+    margin-bottom: 0.75em;
+  }
 }
