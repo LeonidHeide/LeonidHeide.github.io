@@ -31,7 +31,10 @@ function openBibtexModal(button) {
 
   if (!modal || !modalText) return;
 
-  modalText.textContent = template.innerHTML.trim();
+  modalText.textContent = template.content
+    ? template.content.textContent.trim()
+    : template.innerHTML.trim();
+
   modal.classList.add("is-open");
 }
 

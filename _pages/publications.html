@@ -1,13 +1,9 @@
 ---
 layout: archive
-title: "Publications"
+title:
 permalink: /publications/
 author_profile: false
 ---
-
-{% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
-{% endif %}
 
 {% include base_path %}
 
@@ -24,3 +20,11 @@ author_profile: false
 
   {% include publication-single.html %}
 {% endfor %}
+
+<div id="bibtex-modal" class="bibtex-modal" onclick="closeBibtexModal()">
+  <div class="bibtex-modal-content" onclick="event.stopPropagation()">
+    <button class="bibtex-modal-close" type="button" onclick="closeBibtexModal()">×</button>
+    <p class="bibtex-modal-title">Please cite this work as:</p>
+    <pre id="bibtex-modal-text"></pre>
+  </div>
+</div>

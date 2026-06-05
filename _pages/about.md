@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Home"
+title: 
 permalink: /
 author_profile: false
 ---
@@ -30,12 +30,23 @@ author_profile: false
       <a class="cv-button" href="/files/Alexander_Heide_CV.pdf">Link to my CV</a>
     </p>
 
-    <div class="home-links">
-      <a href="mailto:alheide@ucsd.edu">Email</a>
-      <a href="https://scholar.google.com/citations?user=m9EGxX4AAAAJ&hl">Scholar</a>
-      <a href="https://github.com/LeonidHeide">GitHub</a>
-      <a href="https://orcid.org/0009-0006-1522-245X">ORCID</a>
-    </div>
+<div class="home-links">
+  <a href="mailto:alheide@ucsd.edu" aria-label="Email">
+    <i class="fa-solid fa-envelope"></i>
+  </a>
+
+  <a href="https://scholar.google.com/citations?user=m9EGxX4AAAAJ&hl">
+    Scholar
+  </a>
+
+  <a href="https://github.com/LeonidHeide" aria-label="GitHub">
+    <i class="fa-brands fa-github"></i>
+  </a>
+
+  <a href="https://orcid.org/0009-0006-1522-245X">
+    ORCID
+  </a>
+</div>
   </div>
 
 </div>
