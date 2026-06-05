@@ -1,9 +1,14 @@
 /* --- Custom top header --- */
 
 .masthead {
-  border-bottom: none;
-  background: #fff;
+  border-bottom: none !important;
   box-shadow: none !important;
+}
+
+.masthead::after,
+.masthead__inner-wrap::after {
+  display: none !important;
+  border: none !important;
 }
 
 .custom-masthead-wrap {
@@ -123,7 +128,7 @@
   font-weight: 800;
   line-height: 1.35;
   color: #fff;
-  background: #6b2d2d;
+  background: #760000;
   vertical-align: middle;
 }
 
@@ -351,3 +356,17 @@
     justify-content: center;
   }
 }
+
+.page {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.archive {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
