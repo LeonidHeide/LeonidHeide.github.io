@@ -532,24 +532,19 @@ h3,
 
 .publication-card {
   margin-bottom: 0 !important;
-  padding-bottom: 2.8rem !important;
+  padding-bottom: 3.0rem !important;
 }
 
 .publication-card + .publication-card {
-  padding-top: 0.4rem !important;
+  padding-top: 0.5rem !important;
 }
 
-.publication-panel {
-  margin-bottom: 0 !important;
-}
-
-/* Mobile spacing */
 @media screen and (max-width: 600px) {
   .publication-card {
-    padding-bottom: 5.0rem !important;
+    padding-bottom: 4.0rem !important;
   }
 
   .publication-card + .publication-card {
-    padding-top: 0.75rem !important;
+    padding-top: 1.0rem !important;
   }
 }
