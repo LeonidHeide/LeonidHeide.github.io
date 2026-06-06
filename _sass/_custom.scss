@@ -527,3 +527,23 @@ h3,
   text-decoration: underline !important;
 }
 
+
+/* --- Extra spacing between publication entries --- */
+
+.publication-card {
+  margin-bottom: 3.0rem !important;
+}
+
+.publication-toggle-row {
+  margin-bottom: 1.0rem !important;
+}
+
+@media screen and (max-width: 600px) {
+  .publication-card {
+    margin-bottom: 3.5rem !important;
+  }
+
+  .publication-toggle-row {
+    margin-bottom: 1.4rem !important;
+  }
+}
