@@ -223,35 +223,31 @@ h3,
   z-index: 2;
 }
 
-/* Hover state */
 .publication-toggle-button:hover {
   background: #000;
   color: #fff;
 }
 
-/* Active/selected tab */
 .publication-toggle-button.is-active {
   background: #000;
   color: #fff;
   border-color: #000;
 }
 
-/* Connector below active button only */
 .publication-toggle-button.is-active::after {
   content: "";
   position: absolute;
   left: -2px;
   right: -2px;
   top: 100%;
-  height: calc(var(--tab-gap) + 2px);
+  height: calc(var(--tab-gap) + 5px);
   background: #000;
   border-left: 2px solid #000;
   border-right: 2px solid #000;
   pointer-events: none;
-  z-index: 1;
+  z-index: 3;
 }
 
-/* The opened content panel */
 .publication-panel {
   display: none;
   margin-top: 0 !important;
@@ -260,9 +256,10 @@ h3,
   background: #000;
   color: #fff;
   line-height: 1.55;
+  position: relative;
+  z-index: 1;
 }
 
-/* Only the selected panel appears */
 .publication-panel.is-open {
   display: block;
 }
