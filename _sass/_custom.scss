@@ -195,16 +195,19 @@ h3,
 
 /* --- Abstract / In Brief tab buttons --- */
 
+/* --- Abstract / In Brief tab buttons --- */
+
 .publication-toggle-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0.55em;
   margin-top: 0.65em;
-  margin-bottom: 0;
-  align-items: end;
+  margin-bottom: 0.6em; /* creates the white space below inactive button */
+  align-items: stretch;
 }
 
 .publication-toggle-button {
+  position: relative;
   width: 100%;
   padding: 0.5em 0.8em;
   border: 2px solid #000;
@@ -216,9 +219,10 @@ h3,
   letter-spacing: 0.04em;
   text-transform: uppercase;
   cursor: pointer;
+  z-index: 2;
 }
 
-/* Hover state: black fill, white text */
+/* Hover state */
 .publication-toggle-button:hover {
   background: #000;
   color: #fff;
@@ -229,9 +233,20 @@ h3,
   background: #000;
   color: #fff;
   border-color: #000;
-  margin-bottom: -2px; /* makes active button touch the panel */
-  position: relative;
-  z-index: 2;
+}
+
+/* Black connector below only the active button */
+.publication-toggle-button.is-active::after {
+  content: "";
+  position: absolute;
+  left: -2px;
+  right: -2px;
+  bottom: -0.65em;
+  height: 0.65em;
+  background: #000;
+  border-left: 2px solid #000;
+  border-right: 2px solid #000;
+  z-index: 1;
 }
 
 /* The opened content panel */
@@ -248,12 +263,6 @@ h3,
 /* Only the selected panel appears */
 .publication-panel.is-open {
   display: block;
-}
-
-.tldr-panel {
-  background: #000;
-  color: #fff;
-  border-color: #000;
 }
 
 /* --- BibTeX modal --- */
