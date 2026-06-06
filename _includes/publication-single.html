@@ -52,35 +52,35 @@
     </div>
 
     <div class="publication-toggle-row">
+
       {% if post.abstract or post.excerpt %}
-      <button class="publication-toggle-button" type="button" onclick="togglePublicationPanel(this, 'abstract')">
+      <button class="publication-toggle-button abstract-toggle-button" type="button" onclick="togglePublicationPanel(this, 'abstract')">
         Abstract
       </button>
       {% endif %}
 
       {% if post.tldr %}
-      <button class="publication-toggle-button" type="button" onclick="togglePublicationPanel(this, 'tldr')">
+      <button class="publication-toggle-button tldr-toggle-button" type="button" onclick="togglePublicationPanel(this, 'tldr')">
         In Brief
       </button>
       {% endif %}
-    </div>
 
-    {% if post.abstract or post.excerpt %}
-    <div class="publication-panel abstract-panel">
-      {% if post.abstract %}
-        {{ post.abstract }}
-      {% elsif post.excerpt %}
-        {{ post.excerpt }}
+      {% if post.abstract or post.excerpt %}
+      <div class="publication-panel abstract-panel">
+        {% if post.abstract %}
+          {{ post.abstract }}
+        {% elsif post.excerpt %}
+          {{ post.excerpt }}
+        {% endif %}
+      </div>
       {% endif %}
-    </div>
-    {% endif %}
 
-    {% if post.tldr %}
-    <div class="publication-panel tldr-panel">
-      {{ post.tldr }}
-    </div>
-    {% endif %}
+      {% if post.tldr %}
+      <div class="publication-panel tldr-panel">
+        {{ post.tldr }}
+      </div>
+      {% endif %}
 
-  </div>
+    </div>
 
 </div>

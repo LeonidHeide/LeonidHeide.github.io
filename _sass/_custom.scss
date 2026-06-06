@@ -195,14 +195,16 @@ h3,
 
 /* --- Abstract / In Brief tab buttons --- */
 
+/* --- Abstract / In Brief tab buttons --- */
+
 .publication-toggle-row {
   --tab-gap: 0.65em;
 
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 0.55em;
+  column-gap: 0.55em;
+  row-gap: var(--tab-gap);
   margin-top: 0.65em;
-  margin-bottom: var(--tab-gap) !important;
   align-items: stretch;
   position: relative;
 }
@@ -250,7 +252,8 @@ h3,
 
 .publication-panel {
   display: none;
-  margin-top: 0 !important;
+  grid-column: 1 / -1;
+  margin-top: 0;
   padding: 0.95em 1em;
   border: 2px solid #000;
   background: #000;
@@ -262,6 +265,34 @@ h3,
 
 .publication-panel.is-open {
   display: block;
+}
+
+/* Mobile: stack each button above its own panel */
+@media screen and (max-width: 600px) {
+  .publication-toggle-row {
+    grid-template-columns: 1fr;
+    row-gap: var(--tab-gap);
+  }
+
+  .abstract-toggle-button {
+    order: 1;
+  }
+
+  .abstract-panel {
+    order: 2;
+  }
+
+  .tldr-toggle-button {
+    order: 3;
+  }
+
+  .tldr-panel {
+    order: 4;
+  }
+
+  .publication-panel {
+    grid-column: 1;
+  }
 }
 
 /* --- BibTeX modal --- */
