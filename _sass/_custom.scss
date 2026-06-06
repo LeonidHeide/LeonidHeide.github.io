@@ -30,7 +30,8 @@ body {
 
 .site-name-custom {
   font-family: var(--font-display);
-  font-weight: 400;
+  font-weight: 800;
+  font-size: 1.9em;
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: #000;
@@ -88,7 +89,7 @@ h3,
 .page__content h3,
 .publication-year {
   font-family: var(--font-display);
-  font-weight: 400;
+  font-weight: 800;
   letter-spacing: 0.08em;
 }
 
@@ -96,7 +97,7 @@ h3,
   margin-top: 2.0em;
   margin-bottom: 0.7em;
   font-size: 2.15em;
-  font-weight: 400;
+  font-weight: 800;
   letter-spacing: 0.08em;
   color: #222;
 }
@@ -192,20 +193,23 @@ h3,
   font-family: inherit;
 }
 
+/* --- Abstract / In Brief tab buttons --- */
+
 .publication-toggle-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0.55em;
   margin-top: 0.65em;
   margin-bottom: 0;
+  align-items: end;
 }
 
 .publication-toggle-button {
   width: 100%;
   padding: 0.5em 0.8em;
   border: 2px solid #000;
-  background: #000;
-  color: #fff;
+  background: #fff;
+  color: #000;
   font-family: inherit;
   font-size: 0.86em;
   font-weight: 800;
@@ -214,24 +218,34 @@ h3,
   cursor: pointer;
 }
 
-.publication-toggle-button:hover,
+/* Hover state: black fill, white text */
+.publication-toggle-button:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* Active/selected tab */
 .publication-toggle-button.is-active {
   background: #000;
   color: #fff;
-  opacity: 0.82;
+  border-color: #000;
+  margin-bottom: -2px; /* makes active button touch the panel */
+  position: relative;
+  z-index: 2;
 }
 
+/* The opened content panel */
 .publication-panel {
   display: none;
   margin-top: 0;
   padding: 0.95em 1em;
   border: 2px solid #000;
-  border-top: none;
   background: #000;
   color: #fff;
   line-height: 1.55;
 }
 
+/* Only the selected panel appears */
 .publication-panel.is-open {
   display: block;
 }
