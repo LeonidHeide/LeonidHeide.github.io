@@ -1,5 +1,5 @@
 :root {
-  --font-display: "Poiret One", Georgia, serif;
+  --font-display: "Julius Sans One", sans-serif;
   --font-body: "Source Sans 3", "Helvetica Neue", Arial, sans-serif;
 }
 
@@ -30,8 +30,7 @@ body {
 
 .site-name-custom {
   font-family: var(--font-display);
-  font-size: 1.9em;
-  font-weight: 800;
+  font-weight: 400;
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: #000;
@@ -89,15 +88,15 @@ h3,
 .page__content h3,
 .publication-year {
   font-family: var(--font-display);
-  font-weight: 800;
-  letter-spacing: 0.06em;
+  font-weight: 400;
+  letter-spacing: 0.08em;
 }
 
 .publication-year {
   margin-top: 2.0em;
   margin-bottom: 0.7em;
   font-size: 2.15em;
-  font-weight: 800;
+  font-weight: 400;
   letter-spacing: 0.08em;
   color: #222;
 }
@@ -198,14 +197,15 @@ h3,
   grid-template-columns: 1fr 1fr;
   gap: 0.55em;
   margin-top: 0.65em;
+  margin-bottom: 0;
 }
 
 .publication-toggle-button {
   width: 100%;
   padding: 0.5em 0.8em;
   border: 2px solid #000;
-  background: #fff;
-  color: #000;
+  background: #000;
+  color: #fff;
   font-family: inherit;
   font-size: 0.86em;
   font-weight: 800;
@@ -218,14 +218,17 @@ h3,
 .publication-toggle-button.is-active {
   background: #000;
   color: #fff;
+  opacity: 0.82;
 }
 
 .publication-panel {
   display: none;
-  margin-top: 0.55em;
-  padding: 0.9em 1em;
+  margin-top: 0;
+  padding: 0.95em 1em;
   border: 2px solid #000;
-  background: #fff;
+  border-top: none;
+  background: #000;
+  color: #fff;
   line-height: 1.55;
 }
 
@@ -348,6 +351,38 @@ h3,
   }
 }
 
+.home-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.3em;
+  margin-top: 1.8em;
+}
+
+.home-links a,
+.home-links a:visited,
+.home-links a:link {
+  color: #000 !important;
+  text-decoration: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+  font-weight: 800;
+  font-size: 1.05em;
+}
+
+.home-links a:hover {
+  color: #000 !important;
+  opacity: 0.6;
+  text-decoration: none !important;
+  border-bottom: none !important;
+}
+
+.home-links i {
+  color: #000 !important;
+  font-size: 1.25em;
+  vertical-align: middle;
+}
+
 .cv-button:hover {
   background: #000;
   color: #fff !important;
@@ -403,5 +438,39 @@ h3,
 /* Since we are not using the sidebar, remove old theme spacing */
 .sidebar {
   display: none !important;
+}
+
+.page__footer {
+  position: static !important;
+  bottom: auto !important;
+  width: 100%;
+  margin-top: 4rem;
+  border-top: 1px solid #ddd;
+  background: #fff;
+  color: #000;
+}
+
+.page__footer footer {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1.2rem 2rem;
+}
+
+.custom-footer-copyright {
+  font-size: 0.78em;
+  line-height: 1.5;
+  color: #444;
+}
+
+.custom-footer-copyright a {
+  color: #000 !important;
+  text-decoration: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+
+.custom-footer-copyright a:hover {
+  text-decoration: underline !important;
 }
 
