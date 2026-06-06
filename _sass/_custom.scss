@@ -1,3 +1,12 @@
+:root {
+  --font-display: "Cinzel", Georgia, serif;
+  --font-body: "Source Sans 3", "Helvetica Neue", Arial, sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+}
+
 /* --- Custom top header --- */
 
 .masthead {
@@ -20,8 +29,9 @@
 }
 
 .site-name-custom {
+  font-family: var(--font-display);
   font-size: 1.9em;
-  font-weight: 900;
+  font-weight: 800;
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: #000;
@@ -36,9 +46,10 @@
 }
 
 .custom-nav a {
+  font-family: var(--font-body);
   color: #666 !important;
   font-weight: 800;
-  letter-spacing: 0.09em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   text-decoration: none;
   padding-bottom: 0.25em;
@@ -68,11 +79,26 @@
 }
 
 /* --- Publication layout --- */
+h1,
+h2,
+h3,
+.archive h1,
+.archive h2,
+.page__content h1,
+.page__content h2,
+.page__content h3,
+.publication-year {
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: 0.06em;
+}
+
 .publication-year {
   margin-top: 2.0em;
   margin-bottom: 0.7em;
-  font-size: 2.1em;
+  font-size: 2.15em;
   font-weight: 800;
+  letter-spacing: 0.08em;
   color: #222;
 }
 
@@ -294,8 +320,9 @@
 }
 
 .home-profile-text {
-  max-width: 520px;
-  font-size: 1.05em;
+  max-width: 560px;
+  font-family: var(--font-body);
+  font-size: 1.08em;
   line-height: 1.65;
 }
 
