@@ -128,7 +128,7 @@
   font-weight: 800;
   line-height: 1.35;
   color: #fff;
-  background: #555;
+  background: #B80F0A;
   vertical-align: middle;
 }
 
@@ -278,26 +278,53 @@
   }
 }
 
-
-
 .home-profile {
   display: grid;
-  grid-template-columns: 330px 1fr;
-  gap: 3em;
+  grid-template-columns: 280px minmax(0, 1fr);
+  gap: 4rem;
   align-items: center;
-  margin-top: 3em;
+  margin-top: 4rem;
 }
 
 .home-profile-image img {
-  width: 330px;
-  height: 330px;
+  width: 280px;
+  height: 280px;
   object-fit: cover;
   border-radius: 50%;
 }
 
 .home-profile-text {
+  max-width: 520px;
   font-size: 1.05em;
   line-height: 1.65;
+}
+
+@media screen and (max-width: 800px) {
+  .home-profile {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+    margin-top: 2.5rem;
+  }
+
+  .home-profile-image img {
+    width: 240px;
+    height: 240px;
+  }
+
+  .home-profile-text {
+    max-width: 100%;
+  }
+
+  .home-links {
+    justify-content: center;
+  }
+}
+
+.cv-button:hover {
+  background: #000;
+  color: #fff !important;
+  text-decoration: none;
 }
 
 .cv-button {
@@ -312,61 +339,42 @@
   text-decoration: none;
 }
 
-.cv-button:hover {
-  background: #000;
-  color: #fff !important;
-  text-decoration: none;
+/* --- Consistent centered page width --- */
+
+#main {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2.5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
-.home-links {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 1.4em;
-  margin-top: 1.8em;
-}
-
-.home-links a {
-  color: #000 !important;
-  font-weight: 800;
-  text-decoration: none;
-  font-size: 1.05em;
-}
-
-.home-links i {
-  font-size: 1.35em;
-}
-
-.home-links a:hover {
-  opacity: 0.65;
-  text-decoration: none;
-}
-@media screen and (max-width: 800px) {
-  .home-profile {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  .home-profile-image img {
-    width: 240px;
-    height: 240px;
-  }
-
-  .home-links {
-    justify-content: center;
-  }
-}
-
-.page {
-  max-width: 900px;
+.custom-masthead-wrap {
+  max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
 }
 
+.page,
 .archive {
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
+  float: none !important;
+  width: 100% !important;
+  max-width: none !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 
+.page__inner-wrap,
+.page__content {
+  width: 100% !important;
+  max-width: none !important;
+}
+
+/* Since we are not using the sidebar, remove old theme spacing */
+.sidebar {
+  display: none !important;
+}
 
