@@ -195,15 +195,16 @@ h3,
 
 /* --- Abstract / In Brief tab buttons --- */
 
-/* --- Abstract / In Brief tab buttons --- */
-
 .publication-toggle-row {
+  --tab-gap: 0.65em;
+
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0.55em;
   margin-top: 0.65em;
-  margin-bottom: 0.6em; /* creates the white space below inactive button */
+  margin-bottom: var(--tab-gap) !important;
   align-items: stretch;
+  position: relative;
 }
 
 .publication-toggle-button {
@@ -235,24 +236,25 @@ h3,
   border-color: #000;
 }
 
-/* Black connector below only the active button */
+/* Connector below active button only */
 .publication-toggle-button.is-active::after {
   content: "";
   position: absolute;
   left: -2px;
   right: -2px;
-  bottom: -0.65em;
-  height: 0.65em;
+  top: 100%;
+  height: calc(var(--tab-gap) + 2px);
   background: #000;
   border-left: 2px solid #000;
   border-right: 2px solid #000;
+  pointer-events: none;
   z-index: 1;
 }
 
 /* The opened content panel */
 .publication-panel {
   display: none;
-  margin-top: 0;
+  margin-top: 0 !important;
   padding: 0.95em 1em;
   border: 2px solid #000;
   background: #000;
