@@ -1,5 +1,4 @@
 ---
-
 title: "Evaluating the Accuracy of Conventional Drag Prediction and Validation Methods for Small Electric UAVs"
 collection: publications
 category: reports

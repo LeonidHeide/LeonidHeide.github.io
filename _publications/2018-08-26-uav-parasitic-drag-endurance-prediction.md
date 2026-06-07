@@ -1,5 +1,4 @@
 ---
-
 title: "Evaluating the Impact of Parasitic Drag on the Accuracy of Endurance Predictions"
 collection: publications
 category: reports

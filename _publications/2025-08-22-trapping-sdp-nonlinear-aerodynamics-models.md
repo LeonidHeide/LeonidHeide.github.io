@@ -1,5 +1,4 @@
 ---
-
 title: "Data-driven nonlinear aerodynamics models with certifiably optimal boundedness properties"
 collection: publications
 category: manuscripts

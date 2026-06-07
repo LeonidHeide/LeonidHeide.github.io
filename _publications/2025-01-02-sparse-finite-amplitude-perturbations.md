@@ -1,5 +1,4 @@
 ---
-
 title: "An optimization framework for analyzing nonlinear stability due to sparse finite-amplitude perturbations"
 collection: publications
 category: manuscripts
@@ -60,5 +59,5 @@ pages = {014401},
 year = {2025},
 doi = {10.1103/PhysRevFluids.10.014401}
 }
--
+---
 
