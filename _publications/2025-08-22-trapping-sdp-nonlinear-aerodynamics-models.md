@@ -8,17 +8,15 @@ venue: "Preprint"
 authors: "<strong>A. Leonid Heide</strong>, Shih-Chi Liao, Sergio Castiblanco-Ballesteros, Gustaaf B. Jacobs, Peter Seiler, Maziar S. Hemati"
 
 tags:
-
-* Preprint
-* JFM
-* Trapping-SDP
-* Reduced-order modeling
+    - Preprint
+    - JFM
+    - Trapping-SDP
+    - Reduced-order modeling
 
 themes:
-
-* bounded-model-learning
-* rom
-* robustness-uq
+    - bounded-model-learning
+    - rom
+    - robustness-uq
 
 paperurl: "https://arxiv.org/abs/2508.16800"
 

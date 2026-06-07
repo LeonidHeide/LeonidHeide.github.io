@@ -8,10 +8,9 @@ venue: "University of Minnesota Undergraduate Research Opportunities Program"
 authors: "<strong>Leonid Heide</strong>"
 
 tags:
-
-* Report
-* UROP
-* UAV
+    - Report
+    - UROP
+    - UAV
 
 paperurl: "https://conservancy.umn.edu/items/32d7f602-1912-406c-a60b-1c672c80a6d0"
 

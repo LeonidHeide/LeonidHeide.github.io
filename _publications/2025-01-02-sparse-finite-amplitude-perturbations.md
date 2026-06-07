@@ -8,17 +8,15 @@ venue: "Physical Review Fluids"
 authors: "<strong>A. Leonid Heide</strong>, Maziar S. Hemati"
 
 tags:
-
-* Journal
-* Physical Review Fluids
-* Sparse NLOP
-* Nonlinear stability
+    - Journal
+    - Physical Review Fluids
+    - Sparse NLOP
+    - Nonlinear stability
 
 themes:
-
-* optimization-control
-* dynamics-phase
-* robustness-uq
+    - optimization-control
+    - dynamics-phase
+    - robustness-uq
 
 paperurl: "https://link.aps.org/doi/10.1103/PhysRevFluids.10.014401"
 

@@ -8,10 +8,9 @@ venue: "University of Minnesota Undergraduate Research Opportunities Program"
 authors: "<strong>Leonid Heide</strong>, Chris Regan, Demoz Gebre-Egziabher"
 
 tags:
-
-* Report
-* UROP
-* UAV
+    - Report
+    - UROP
+    - UAV
 
 paperurl: "https://conservancy.umn.edu/bitstreams/cb78907f-d108-44f4-8efe-11488c1fbdac/download"
 
