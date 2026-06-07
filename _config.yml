@@ -90,6 +90,10 @@ publication_category:
     title: 'Journal Articles'    
   conferences:
     title: 'Conference Papers'
+  reports:
+    title: "Reports"
+  thesis:
+    title: "Dissertation"
 
 
 # Site Settings
