@@ -755,6 +755,16 @@ h3,
   }
 }
 
+/* --- Desktop research buttons: align with theme text column --- */
+
+@media screen and (min-width: 601px) {
+  .research-toggle-row {
+    margin-left: calc(70px + 1.2rem) !important;
+    width: calc(100% - 70px - 1.2rem) !important;
+  }
+}
+
+
 /* --- Mobile research buttons: align with theme text column --- */
 
 @media screen and (max-width: 600px) {
