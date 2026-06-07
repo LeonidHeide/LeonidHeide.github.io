@@ -1,0 +1,66 @@
+{% assign theme = include.theme %}
+
+<div class="research-theme" id="{{ theme.id }}">
+
+  <div class="research-theme-header">
+    <div class="research-theme-number">{{ theme.number }}</div>
+
+    <div class="research-theme-heading">
+      <h2>{{ theme.title }}</h2>
+      <p>{{ theme.summary }}</p>
+    </div>
+  </div>
+
+  <div class="research-toggle-row">
+
+    <button class="research-toggle-button brief-toggle-button" type="button" onclick="toggleResearchPanel(this, 'brief')">
+      In Brief
+    </button>
+
+    <button class="research-toggle-button technical-toggle-button" type="button" onclick="toggleResearchPanel(this, 'technical')">
+      Technical View
+    </button>
+
+    <button class="research-toggle-button related-toggle-button" type="button" onclick="toggleResearchPanel(this, 'related')">
+      Related Work
+    </button>
+
+    <div class="research-panel brief-panel">
+      {{ theme.brief }}
+    </div>
+
+    <div class="research-panel technical-panel">
+      {{ theme.technical }}
+    </div>
+
+    <div class="research-panel related-panel">
+      {% assign found_related = false %}
+
+      <ul class="research-related-list">
+      {% assign publications_by_date = site.publications | sort: "date" | reverse %}
+      {% for pub in publications_by_date %}
+        {% if pub.themes contains theme.id %}
+          {% assign found_related = true %}
+          <li>
+            <strong>{{ pub.title }}</strong>
+            {% if pub.venue %}
+              <br><em>{{ pub.venue }}</em>{% if pub.date %}, {{ pub.date | date: "%Y" }}{% endif %}
+            {% endif %}
+            {% if pub.paperurl %}
+              <br><a href="{{ pub.paperurl }}" target="_blank" rel="noopener">Paper</a>
+            {% endif %}
+          </li>
+        {% endif %}
+      {% endfor %}
+      </ul>
+
+      {% unless found_related %}
+        <p>No related publications listed yet.</p>
+      {% endunless %}
+    </div>
+
+  </div>
+
+</div>
+
+<div class="research-theme-spacer" aria-hidden="true"></div>

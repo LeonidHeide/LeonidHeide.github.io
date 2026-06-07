@@ -11,6 +11,10 @@ tags:
   - Preprint
   - Open access
 
+themes:
+  - rom
+  - bounded-model-learning
+
 paperurl: "https://example.com/paper"
 slidesurl: "https://example.com/slides"
 

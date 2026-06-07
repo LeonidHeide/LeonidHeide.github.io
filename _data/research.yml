@@ -1,0 +1,64 @@
+themes:
+  - id: rom
+    number: "01"
+    title: "Reliable reduced-order models"
+    summary: "Learning compact dynamical systems that preserve the important behavior of complex fluid flows."
+    brief: >
+      High-fidelity fluid simulations are often too large and expensive to use directly for design,
+      prediction, or control. My work develops simpler models that retain the essential dynamics
+      while remaining reliable beyond short training windows.
+    technical: >
+      This research combines modal decomposition, sparse regression, operator inference, and
+      physics-informed constraints to learn low-dimensional dynamical systems from high-dimensional
+      flow data. A central goal is to build reduced-order models that are accurate, interpretable,
+      and stable enough for downstream analysis and control.
+
+  - id: bounded-model-learning
+    number: "02"
+    title: "Physics-informed and bounded model learning"
+    summary: "Constraining learned models so that they respect qualitative physical structure."
+    brief: >
+      Data-driven models can make accurate short-term predictions but then drift, diverge, or behave
+      unphysically. I work on methods that build physical structure into learned models so their
+      long-time behavior remains meaningful.
+    technical: >
+      This work focuses on enforcing boundedness, energy consistency, and trapping-region structure
+      in learned dynamical systems. These ideas connect data-driven model discovery with convex
+      optimization, semidefinite programming, and stability analysis.
+
+  - id: dynamics-phase
+    number: "03"
+    title: "Dynamics, phase, and coherent structure"
+    summary: "Using modal, phase-based, and time-frequency tools to understand unsteady flows."
+    brief: >
+      Many fluid flows are organized by recurring structures and rhythms. I use phase, frequency,
+      and modal analysis to identify how these structures evolve and how they respond to forcing
+      or actuation.
+    technical: >
+      This work includes POD-based analysis, wavelet/time-frequency methods, phase identification,
+      and coherent-structure interpretation for separated aerodynamic flows. The goal is to connect
+      high-dimensional flow fields with interpretable dynamical mechanisms.
+
+  - id: optimization-control
+    number: "04"
+    title: "Optimization and flow control"
+    summary: "Finding perturbations and actuation strategies that strongly influence nonlinear flows."
+    brief: >
+      Instead of asking only how a flow evolves, I also ask how it can be changed. My control work
+      studies which disturbances or actuator inputs have the largest effect on the future flow state.
+    technical: >
+      This research uses optimization-based methods for finite-amplitude perturbations, sparse
+      nonlinear optimal perturbations, actuator placement, and active flow control. These methods
+      help identify sensitive regions, influential structures, and effective control strategies.
+
+  - id: robustness-uq
+    number: "05"
+    title: "Robustness, uncertainty, and emerging directions"
+    summary: "Extending model-learning and control methods toward robust prediction and decision-making."
+    brief: >
+      Real fluid systems are uncertain, noisy, and imperfectly modeled. A growing direction of my
+      work is to understand how reduced models and controllers behave under uncertainty and how to
+      make them more robust.
+    technical: >
+      Current and emerging interests include uncertainty quantification, PDE lifting, nonlinear
+      balanced truncation, stochastic operator-inference ideas, and robust nonlinear control.

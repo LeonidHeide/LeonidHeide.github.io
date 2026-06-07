@@ -48,3 +48,22 @@ document.addEventListener("keydown", function(event) {
     closeBibtexModal();
   }
 });
+
+function toggleResearchPanel(button, panelType) {
+  const theme = button.closest(".research-theme");
+  if (!theme) return;
+
+  const allButtons = theme.querySelectorAll(".research-toggle-button");
+  const allPanels = theme.querySelectorAll(".research-panel");
+
+  const targetPanel = theme.querySelector("." + panelType + "-panel");
+  const isOpen = targetPanel && targetPanel.classList.contains("is-open");
+
+  allPanels.forEach((panel) => panel.classList.remove("is-open"));
+  allButtons.forEach((btn) => btn.classList.remove("is-active"));
+
+  if (targetPanel && !isOpen) {
+    targetPanel.classList.add("is-open");
+    button.classList.add("is-active");
+  }
+}
