@@ -754,3 +754,22 @@ h3,
     height: 3.5rem;
   }
 }
+
+/* --- Mobile research buttons: align with theme text column --- */
+
+@media screen and (max-width: 600px) {
+  .research-toggle-row {
+    margin-left: calc(52px + 0.9rem) !important;
+    width: calc(100% - 52px - 0.9rem) !important;
+  }
+
+  .research-toggle-button {
+    font-size: 0.78em;
+    padding: 0.45em 0.55em;
+  }
+
+  .research-panel {
+    font-size: 0.95em;
+    padding: 0.85em 0.9em;
+  }
+}
