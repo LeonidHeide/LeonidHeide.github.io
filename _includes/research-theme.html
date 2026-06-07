@@ -1,6 +1,6 @@
 {% assign theme = include.theme %}
 
-<div class="research-theme" id="{{ theme.id }}">
+<div class="research-theme {% if include.last %}research-theme-last{% endif %}" id="{{ theme.id }}">
 
   <div class="research-theme-header">
     <div class="research-theme-number">{{ theme.number }}</div>

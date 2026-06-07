@@ -23,7 +23,7 @@ author_profile: false
 <div class="research-map">
 
 {% for theme in site.data.research.themes %}
-  {% include research-theme.html theme=theme %}
+  {% include research-theme.html theme=theme last=forloop.last %}
 {% endfor %}
 
 </div>

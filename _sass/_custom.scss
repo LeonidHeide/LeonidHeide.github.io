@@ -195,8 +195,6 @@ h3,
 
 /* --- Abstract / In Brief tab buttons --- */
 
-/* --- Abstract / In Brief tab buttons --- */
-
 .publication-toggle-row {
   --tab-gap: 0.65em;
 
@@ -532,7 +530,7 @@ h3,
 
 .publication-card {
   margin-bottom: 0 !important;
-  padding-bottom: 2.0rem !important;
+  padding-bottom: 1.5rem !important;
 }
 
 .publication-card + .publication-card {
@@ -576,13 +574,16 @@ h3,
 .research-theme-number {
   width: 52px;
   height: 52px;
-  border: 2px solid #000;
+  border: 2px solid #B80F0A;
+  background: #B80F0A;
+  color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: var(--font-display);
   font-weight: 800;
   font-size: 1.1em;
+  line-height: 1;
 }
 
 .research-theme-heading h2 {
@@ -609,8 +610,8 @@ h3,
   background: #000;
 }
 
-.research-theme:last-of-type::before {
-  display: none;
+.research-theme-last::before {
+  display: none !important;
 }
 
 .research-toggle-row {
