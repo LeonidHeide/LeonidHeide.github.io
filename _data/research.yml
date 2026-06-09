@@ -2,7 +2,7 @@ themes:
   - id: rom
     number: "01"
     title: "Reliable reduced-order models"
-    summary: "Learning compact dynamical systems that preserve the important behavior of complex fluid flows."
+    summary: "Learning compact dynamical systems that preserve the important behavior of fluid flows."
     brief: >
       High-fidelity fluid simulations are often too large and expensive to use directly for design,
       prediction, or control. My work develops simpler models that retain the essential dynamics

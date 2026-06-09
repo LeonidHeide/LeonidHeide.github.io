@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2022-06-01-low-order-nonlinear-model-stalled-airfoil.md",
+                "file": "2018-08-26-uav-parasitic-drag-endurance-prediction.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2022-06-01-low-order-nonlinear-model-stalled-airfoil"
+              "title": "2018-08-26-uav-parasitic-drag-endurance-prediction"
             }
           }
         ]
@@ -182,13 +182,13 @@
   },
   "active": "16b30416ffcf66dc",
   "lastOpenFiles": [
-    "2025-01-02-sparse-finite-amplitude-perturbations.md",
-    "2025-02-01-convex-trapping-regions-lossless-quadratic-systems.md",
+    "2019-07-28-drag-prediction-validation-small-electric-uavs.md",
     "2025-08-22-trapping-sdp-nonlinear-aerodynamics-models.md",
     "2026-01-08-when-and-where-pulsed-control-airfoil.md",
     "2026-05-20-phd-thesis.md",
+    "2025-02-01-convex-trapping-regions-lossless-quadratic-systems.md",
+    "2025-01-02-sparse-finite-amplitude-perturbations.md",
     "2018-08-26-uav-parasitic-drag-endurance-prediction.md",
-    "2019-07-28-drag-prediction-validation-small-electric-uavs.md",
     "2022-06-01-low-order-nonlinear-model-stalled-airfoil.md"
   ]
 }
