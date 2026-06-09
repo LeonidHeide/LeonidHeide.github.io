@@ -1,0 +1,194 @@
+{
+  "main": {
+    "id": "422185e77ecf8c11",
+    "type": "split",
+    "children": [
+      {
+        "id": "97f45043df90a2ab",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "16b30416ffcf66dc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2022-06-01-low-order-nonlinear-model-stalled-airfoil.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2022-06-01-low-order-nonlinear-model-stalled-airfoil"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "71159e13b631adca",
+    "type": "split",
+    "children": [
+      {
+        "id": "4044ddcab082e403",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6bde47a5a65e6ed8",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "60382fb092475a1f",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "9d4b10220a3b3062",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "035e7e24f7206d00",
+    "type": "split",
+    "children": [
+      {
+        "id": "14dae180045dfb9b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d98e3d021cadb84b",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "2e2884c8f43a6d02",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "9c05465d69c08777",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "b9c7275958ad9501",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "1c1a821986fada88",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "16b30416ffcf66dc",
+  "lastOpenFiles": [
+    "2025-01-02-sparse-finite-amplitude-perturbations.md",
+    "2025-02-01-convex-trapping-regions-lossless-quadratic-systems.md",
+    "2025-08-22-trapping-sdp-nonlinear-aerodynamics-models.md",
+    "2026-01-08-when-and-where-pulsed-control-airfoil.md",
+    "2026-05-20-phd-thesis.md",
+    "2018-08-26-uav-parasitic-drag-endurance-prediction.md",
+    "2019-07-28-drag-prediction-validation-small-electric-uavs.md",
+    "2022-06-01-low-order-nonlinear-model-stalled-airfoil.md"
+  ]
+}
